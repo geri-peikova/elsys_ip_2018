@@ -17,7 +17,7 @@ import org.elsys.ip.servlet.service.UserService;
 public class AdminServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	private UserService userService = new UserService();
+	private static UserService userService = new UserService();
        
     /**
      * @see HttpServlet#HttpServlet()
