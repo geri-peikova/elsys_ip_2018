@@ -1,30 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
-	<display-name>2_Servlets</display-name>
-	<servlet>
-		<servlet-name>AdminServlet</servlet-name>
-		<servlet-class>org.elsys.ip.servlet.controller.AdminServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>AdminServlet</servlet-name>
-		<url-pattern>/admin</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
-		<servlet-name>UserServlet</servlet-name>
-		<servlet-class>org.elsys.ip.servlet.controller.UserServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>UserServlet</servlet-name>
-		<url-pattern>/user/*</url-pattern>
-	</servlet-mapping>
-	
-		<filter>
-		<filter-name>LoginFilter</filter-name>
-		<filter-class>org.elsys.ip.servlet.filter.LoginFilter</filter-class>
-	</filter>
-	<filter-mapping>
-		<filter-name>LoginFilter</filter-name>
-		<url-pattern>/*</url-pattern>
-	</filter-mapping>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.4">
+  <display-name>api</display-name>
+  <servlet>
+    <servlet-name>ClothesServlet</servlet-name>
+    <servlet-class>org.elsys.ip.servlet.controller.ClothesServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddClothesServlet</servlet-name>
+    <servlet-class>org.elsys.ip.servlet.controller.AddClothesServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteClothesServlet</servlet-name>
+    <servlet-class>org.elsys.ip.servlet.controller.DeleteClothesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ClothesServlet</servlet-name>
+    <url-pattern>/clothes/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddClothesServlet</servlet-name>
+    <url-pattern>/add_clothes/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteClothesServlet</servlet-name>
+    <url-pattern>/delete_clothes/*</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
